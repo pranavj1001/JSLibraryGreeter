@@ -5,21 +5,26 @@
 		return new Greeter.init(firstName, lastName, language);
 	}
 
-	var supportLanguages = ['English', 'Spanish'];
+	/*
+	languages which are currently supported
+	en - English
+	es - Spanish
+	*/
+	var supportLanguages = ['en', 'es'];
 
 	var greetings = {
-		English: 'Hello',
-		Spanish: 'Hola'
+		en: 'Hello',
+		es: 'Hola'
 	};
 
 	var formalGreetings = {
-		English: 'Greetings',
-		Spanish: 'Saludos'
+		en: 'Greetings',
+		es: 'Saludos'
 	};
 
 	var logMessages = {
-		English: 'Logged In',
-		Spanish: 'Inició Sessión'
+		en: 'Logged In',
+		es: 'Inició Sessión'
 	};
 
 	Greeter.prototype = {//used  object literal here
@@ -30,7 +35,7 @@
 
 		validate: function(){
 			if(supportLanguages.indexOf(this.language) == -1){
-				throw " Invalid language";
+				throw "Invalid language";
 			}
 		},
 
@@ -86,7 +91,7 @@
 		var self = this;
 		self.firstName = firstName || " ";
 		self.lastName = lastName || " ";
-		self.language = language || "English"; 
+		self.language = language || "en"; 
 
 	}
 
