@@ -1,2 +1,2 @@
 var g = G$('Pranav','Jain');
-g.greet().setLang('Spanish').greet(true);
+g.greet().setLang('es').greet(true);

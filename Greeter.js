@@ -48,21 +48,12 @@
 		},
 
 		greet: function(formal){
+
 			var msg;
-
-			//if undefined or null it will be coerced to 'false'
-			if(formal){
-				msg = this.formalGreeting();
-			}else{
-				msg = this.greeting();
-			}
-
-			if(console){
-				console.log(msg);
-			}
+			msg = this.prepareTheGreeting(formal);
+			console.log(msg);
 
 			//'this' refers to the calling object at execution time, makes the method chainable
-
 			return this;
 
 		},
@@ -82,6 +73,35 @@
 			this.validate();
 			return this;
 
+		},
+
+		HTMLGreeting: function(selector, formal){
+			if(!$){
+				throw "jQuery not loaded";
+			}
+
+			if(!selector){
+				throw "Missing selector";
+			}
+
+			var msg;
+			msg = this.prepareTheGreeting(formal);
+
+			$(selector).html(msg);
+
+			return this;
+		},
+
+		prepareTheGreeting: function(formal){
+			var msg;
+
+			//if undefined or null it will be coerced to 'false'
+			if(formal){
+				msg = this.formalGreeting();
+			}else{
+				msg = this.greeting();
+			}
+			return msg;
 		}
 
 	};
