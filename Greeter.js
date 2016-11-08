@@ -12,27 +12,30 @@
 	es - Spanish
 	*/
 	//hidden with the scope of the IIFE and never directly accessible
-	var supportLanguages = ['en', 'es', 'fr'];
+	var supportLanguages = ['en', 'es', 'fr', 'ge'];
 
 	//informal greetings
 	var greetings = {
 		en: 'Hello',
 		es: 'Hola',
-		fr: 'Allo'
+		fr: 'Allo',
+		ge: 'Hallo'
 	};
 
 	//formal greetings
 	var formalGreetings = {
 		en: 'Greetings',
 		es: 'Saludos',
-		fr: 'Bonjour'
+		fr: 'Bonjour',
+		ge: 'Servus'
 	};
 
 	//log Messages
 	var logMessages = {
 		en: 'Logged In',
 		es: 'Inició Sessión',
-		fr: 'Connecté'
+		fr: 'Connecté',
+		ge: 'Eingeloggt'
 	};
 
 	//prototype holds methods (to save memory space)
