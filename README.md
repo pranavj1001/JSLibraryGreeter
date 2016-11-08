@@ -12,6 +12,6 @@ About the library:
 
 The library generates formal and informal greetings when it gets a first and last name.
 
-It supports multiple languages (currently only two (en,es)) More will be added soon.
+It supports multiple languages (currently four (en, es, fr, ge)) More will be added soon.
 
 It can be reused. It is user-friendly. It supports jQuery.
